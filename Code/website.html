@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="website.css">
+</head>
+
+<body>
+    <header></header>
+    <div class="layout">
+
+        <div class="carousel">
+            <div class="image-slideshow">
+
+                <div class="slides-wrapper">
+                    <img src="/Image/iMac 24 inch M4 16GB-256GB.jpg" alt="">
+                    <img src="/Image/vivo V50 Lite 8GB-256GB.jpg" alt="">
+                    <img src="/Image/iMac 24 inch M4 16GB-256GB.jpg" alt="">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </div>
+
+
+        <div class="info-area"></div>
+        <ul>
+            <li>
+                <h3>iMac 24 inch M4 16GB-256GB</h3>
+            </li>
+            <li>stars</li>
+            <li>6.720.000 <sup>vnd</sup></li>
+        </ul>
+
+    </div>
+
+    <section class="description">
+
+    </section>
+</body>
+<footer></footer>
+<script>
+    let index = 0;
+
+    function showSlide() {
+        const wrapper = document.querySelector('.slides-wrapper');
+        const total = document.querySelectorAll('.slides-wrapper img').length;
+
+        if (index >= total) index = 0;
+        if (index < 0) index = total - 1;
+
+        wrapper.style.transform = `translateX(${-index * 400}px)`;
+    }
+
+    function plusSlides(step) {
+        index += step;
+        showSlide();
+    }
+
+</script>
+</body>
+
+</html>
