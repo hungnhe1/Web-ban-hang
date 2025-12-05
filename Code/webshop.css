@@ -18,27 +18,41 @@ body .container{
 }
 .container{
     background-color: #FFD000;
+    border-radius: 7px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     width: 1000px;
     padding: 0 var(--space-4) 0 var(--space-4);
 }
+/*Khung san pham*/
 .product-container{
     background-color: white;
     display: flex;
     border-radius: 7px;
-    padding: 0 var(--space-1) var(--space-2) var(--space-1);
-    margin: 0 var(--space-1) var(--space-2) var(--space-1);
+    width: calc(20% - 20px);
+    padding: var(--space-1) var(--space-1) var(--space-2) var(--space-1);
+    margin: var(--space-1) var(--space-1) var(--space-2) var(--space-1);
     height: fit-content;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
 }
 .product-container ul li img{
     width: 163px;
     display: block;
     margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+.product-container:hover img{
+    transform: translateY(-5px);
 }
 .product-container ul li{
     list-style-type: none;
+}
+.product-container:hover li:nth-child(2){
+    color: blue;
 }
 .product-container ul li:nth-child(3){
     color: red;

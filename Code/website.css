@@ -1,3 +1,11 @@
+.layout {
+    display: flex;
+    border: solid 1px blue;
+}
+
+
+
+/*Image carousel*/
 .carousel {
     width: 600px;
     position: relative;
@@ -7,14 +15,13 @@
     width: 400px;
     height: 400px;
     overflow: hidden;
-    border: 2px solid black;
+    border: 1px solid black;
     position: relative;
 }
 
-/* Đây mới là dải slide thực sự */
 .slides-wrapper {
     display: flex;
-    width: 300%; /* 3 ảnh → 3x100% */
+    width: 300%;
     transition: transform 0.5s ease;
 }
 
@@ -25,7 +32,6 @@
     flex-shrink: 0;
 }
 
-/* Nút điều hướng */
 .image-slideshow a {
     position: absolute;
     top: 50%;
@@ -40,25 +46,45 @@
     border-radius: 4px;
 }
 
-.image-slideshow:active{
+.image-slideshow:active {
     background-color: rgb(83, 83, 83);
 }
 
-.prev { left: 10px; }
-.next { right: 10px; }
-
-.layout{
-    display: flex;
+.prev {
+    left: 10px;
 }
 
-.layout ul{
+.next {
+    right: 10px;
+}
+
+/*Info area*/
+.info-area {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-area li{
+    padding: 1px;
+}
+
+.info-area ul {
     list-style-type: none;
 }
 
-.layout ul li:nth-child(1){
+.info-area ul li h3 {
     color: red;
 }
 
-.layout ul li:nth-child(2){}
+.info-area ul li:nth-child(2) {
+    font-weight: bold;
+}
 
-.layout ul li:nth-child(3){}
+.info-area ul li:nth-child(3) i {
+    color: yellow;
+}
+/*Product discription*/
+.product-description{
+    border: solid 1px blue;
+    margin: 5px 0;
+}
