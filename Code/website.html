@@ -13,45 +13,129 @@
     <header></header>
     <section class="product-info">
         <div class="layout">
-        <div class="carousel">
-            <div class="image-slideshow">
+            <div class="carousel">
+                <div class="image-slideshow">
 
-                <div class="slides-wrapper">
-                    <img src="/Image/iMac 24 inch M4 16GB-256GB.jpg" alt="">
-                    <img src="/Image/vivo V50 Lite 8GB-256GB.jpg" alt="">
-                    <img src="/Image/iMac 24 inch M4 16GB-256GB.jpg" alt="">
+                    <div class="slides-wrapper">
+                        <img src="Image/iMac 24 inch M4 16GB-256GB.jpg" alt="">
+                        <img src="Image/vivo V50 Lite 8GB-256GB.jpg" alt="">
+                        <img src="Image/iMac 24 inch M4 16GB-256GB.jpg" alt="">
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
                 </div>
-
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
-        </div>
-        <div class="info-area">
-            <ul>
-                <li>
-                    <h3>iMac 24 inch M4 16GB-256GB</h3>
-                    <hr>
-                </li>
-                <li>6.720.000 <sup>vnd</sup></li>
-                <li> 4.9 <i class="fa-solid fa-star"></i></li>
-            </ul>
+            <div class="info-area">
+                <ul>
+                    <li>
+                        <h3>iMac 24 inch M4 16GB-256GB</h3>
+                        <hr>
+                    </li>
+                    <li>6.720.000 <sup>vnd</sup></li>
+                    <li> 4.9 <i class="fa-solid fa-star"></i></li>
+                </ul>
+                <div class="buy-section">
+                    <div class="quantity-box">
+                        <button class="qty-btn" onclick="changeQty(-1)">-</button>
+                        <input type="number" id="quantity" value="1" min="1">
+                        <button class="qty-btn" onclick="changeQty(1)">+</button>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="add-cart">Thêm vào giỏ</button>
+                        <button class="buy-now">Mua ngay</button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-        
+
     <section class="description">
         <div class="product-description">
             <h3>Thông tin sản phẩm</h3>
-            <li>Kích thước:</li>
-            <li>Chất liệu:</li>
-            <li>Trọng lượng:</li>
-            <li>Xuất xứ:</li>
-            <li>Model:</li>
+            <ul>
+                <li>Kích thước:</li>
+                <li>Chất liệu:</li>
+                <li>Trọng lượng:</li>
+                <li>Xuất xứ:</li>
+                <li>Model:</li>
+            </ul>
         </div>
+    </section>
+    <section class="product-show">
+        <div class="container">
+            <a href="" class="product-container">
+                <ul>
+                    <li><img src="/Image/iMac 24 inch M4 16GB-256GB.jpg" alt=""></li>
+                    <li>iMac 24 inch M4 16GB-256GB</li>
+                    <li>6.720.000 <sup>vnd</sup></li>
+                    <li>9.000.000 <sup>vnd</sup></li>
+                </ul>
+            </a>
+            <a href="" class="product-container">
+                <ul>
+                    <li><img src="/Image/iMac 24 inch M4 16GB-256GB.jpg" alt=""></li>
+                    <li>iMac 24 inch M4 16GB-256GB</li>
+                    <li>6.720.000 <sup>vnd</sup></li>
+                    <li>9.000.000 <sup>vnd</sup></li>
+                </ul>
+            </a>
+            <a href="" class="product-container">
+                <ul>
+                    <li><img src="/Image/iMac 24 inch M4 16GB-256GB.jpg" alt=""></li>
+                    <li>iMac 24 inch M4 16GB-256GB</li>
+                    <li>6.720.000 <sup>vnd</sup></li>
+                    <li>9.000.000 <sup>vnd</sup></li>
+                </ul>
+            </a>
+            <a href="" class="product-container">
+                <ul>
+                    <li><img src="/Image/iMac 24 inch M4 16GB-256GB.jpg" alt=""></li>
+                    <li>iMac 24 inch M4 16GB-256GB</li>
+                    <li>6.720.000 <sup>vnd</sup></li>
+                    <li>9.000.000 <sup>vnd</sup></li>
+                </ul>
+            </a>
+            <a href="" class="product-container">
+                <ul>
+                    <li><img src="/Image/iMac 24 inch M4 16GB-256GB.jpg" alt=""></li>
+                    <li>iMac 24 inch M4 16GB-256GB</li>
+                    <li>6.720.000 <sup>vnd</sup></li>
+                    <li>9.000.000 <sup>vnd</sup></li>
+                </ul>
+            </a>
+
+        </div>
+    </section>
+    <section class="comment-section">
+        <div class="comment-box">
+            <h3>Đánh giá sản phẩm</h3>
+
+            <div class="rating" id="rating-stars">
+                <i data-star="1">★</i>
+                <i data-star="2">★</i>
+                <i data-star="3">★</i>
+                <i data-star="4">★</i>
+                <i data-star="5">★</i>
+            </div>
+
+            <textarea id="comment-text" placeholder="Hãy chia sẻ cảm nhận của bạn..."></textarea>
+
+            <input type="file" id="imageUpload" accept="image/*" multiple>
+
+            <div class="image-preview" id="preview"></div>
+
+            <button class="submit-btn" onclick="submitComment()"><strong>Gửi đánh giá</strong></button>
+        </div>
+
+        <h2 style="text-align:center">Các đánh giá của khách hàng</h2>
+        <div class="review-list" id="review-list"></div>
     </section>
 </body>
 <footer></footer>
 <script>
+    //image slideshow
     let index = 0;
 
     function showSlide() {
@@ -63,12 +147,150 @@
 
         wrapper.style.transform = `translateX(${-index * 400}px)`;
     }
+    //change quantity
 
     function plusSlides(step) {
         index += step;
         showSlide();
     }
 
+    function changeQty(num) {
+        let qty = document.getElementById("quantity");
+        let value = parseInt(qty.value) + num;
+
+        if (value < 1) value = 1;
+        qty.value = value;
+    }
+</script>
+<script>
+    // ==========================
+    // 1. XỬ LÝ ĐÁNH GIÁ SAO
+    // ==========================
+    const stars = document.querySelectorAll('#rating-stars i');
+    let ratingValue = 0;
+
+    stars.forEach(star => {
+        star.addEventListener('click', function () {
+            ratingValue = this.getAttribute('data-star');
+
+            stars.forEach(s => s.classList.remove("active"));
+
+            for (let i = 0; i < ratingValue; i++) {
+                stars[i].classList.add("active");
+            }
+        });
+    });
+
+    // ==========================
+    // 2. PREVIEW TỐI ĐA 5 ẢNH
+    // ==========================
+    let selectedImages = [];
+
+    document.getElementById('imageUpload').addEventListener('change', function () {
+        const preview = document.getElementById('preview');
+        preview.innerHTML = "";
+        selectedImages = [];
+
+        const files = Array.from(this.files).slice(0, 5);
+
+        files.forEach(file => {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                selectedImages.push(e.target.result); // Lưu base64 vào mảng
+
+                const img = document.createElement("img");
+                img.src = e.target.result;
+                preview.appendChild(img);
+            };
+            reader.readAsDataURL(file);
+        });
+
+        if (this.files.length > 5) {
+            alert("Bạn chỉ được chọn tối đa 5 ảnh!");
+        }
+    });
+
+    // ==========================
+    // 3. SUBMIT ĐÁNH GIÁ
+    // ==========================
+    function submitComment() {
+        const comment = document.getElementById("comment-text").value;
+
+        if (ratingValue === 0) {
+            alert("Vui lòng chọn số sao!");
+            return;
+        }
+        if (comment.trim() === "") {
+            alert("Vui lòng nhập bình luận!");
+            return;
+        }
+
+        // Tạo đối tượng đánh giá
+        const review = {
+            stars: ratingValue,
+            comment: comment,
+            images: selectedImages,
+            date: new Date().toLocaleString()
+        };
+
+        // Lưu vào localStorage
+        let reviewList = JSON.parse(localStorage.getItem("reviews")) || [];
+        reviewList.push(review);
+        localStorage.setItem("reviews", JSON.stringify(reviewList));
+
+        // Cập nhật giao diện
+        displayReviews();
+        resetForm();
+
+        alert("Cảm ơn bạn đã gửi đánh giá!");
+    }
+
+    // ==========================
+    // 4. HIỂN THỊ TẤT CẢ ĐÁNH GIÁ
+    // ==========================
+    function displayReviews() {
+        let reviewList = JSON.parse(localStorage.getItem("reviews")) || [];
+        const container = document.getElementById("review-list");
+
+        container.innerHTML = "";
+
+        reviewList.forEach(review => {
+            let item = document.createElement("div");
+            item.classList.add("review-item");
+
+            // Sao
+            let starHTML = "";
+            for (let i = 0; i < review.stars; i++) starHTML += "★";
+            for (let i = review.stars; i < 5; i++) starHTML += "☆";
+
+            item.innerHTML = `
+            <div class="review-stars">${starHTML}</div>
+            <p>${review.comment}</p>
+            <div class="review-images">
+                ${review.images.map(img => `<img src="${img}">`).join("")}
+            </div>
+            <small>${review.date}</small>
+        `;
+
+            container.appendChild(item);
+        });
+    }
+
+    // ==========================
+    // 5. RESET FORM SAU KHI GỬI
+    // ==========================
+    function resetForm() {
+        document.getElementById("comment-text").value = "";
+        document.getElementById("imageUpload").value = "";
+        document.getElementById("preview").innerHTML = "";
+        selectedImages = [];
+
+        ratingValue = 0;
+        stars.forEach(s => s.classList.remove("active"));
+    }
+
+    // Load đánh giá khi mở trang
+    displayReviews();
 </script>
 </body>
 

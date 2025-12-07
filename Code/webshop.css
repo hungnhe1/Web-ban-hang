@@ -13,16 +13,12 @@
   --space-8: 35px;
   --space-10: 40px;
 }
-body .container{
-    align-items: center;
-}
 .container{
     background-color: #FFD000;
     border-radius: 7px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
     width: 1000px;
     padding: 0 var(--space-4) 0 var(--space-4);
 }
@@ -34,12 +30,11 @@ body .container{
     width: calc(20% - 20px);
     padding: var(--space-1) var(--space-1) var(--space-2) var(--space-1);
     margin: var(--space-1) var(--space-1) var(--space-2) var(--space-1);
-    height: fit-content;
     cursor: pointer;
     text-decoration: none;
     color: black;
 }
-.product-container ul li img{
+.product-container img{
     width: 163px;
     display: block;
     margin: 0 auto;
@@ -63,15 +58,5 @@ body .container{
     text-decoration: line-through;
     padding: 5px;
 }
-.product-container ul li:nth-child(5){
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.product-container a{
-    width: 150px;
-    height: 20px;
-    background-color: aqua;
-    display: block;
-    text-align: center;
-}
+
+
